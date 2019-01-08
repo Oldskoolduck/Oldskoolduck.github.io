@@ -20,7 +20,7 @@ $brand-secondary:darken($brand-primary, 10%);
 $brand-gradient: linear-gradient(to bottom right, #96e6a1, #d4fc79);
 $brand-light:#FFF;
 $brand-offlight:#F5F5F5;
-$brand-grey:#b9b6b6;
+$brand-grey:#9aa4ad;
 $brand-dark:#404040;
 $brand-sidebar-dark:rgba(#404040, 0.97);
 $brand-primary-font:'Lato', sans-serif;
@@ -132,14 +132,8 @@ html,
 body{
   height:100%;
   width:100%;
-}
-
-
-body{
   color:$brand-light;
   font-family:$brand-primary-font;
-  height:100%;
-  width:100%;
   text-rendering:optimizeLegibility;
   -webkit-font-smoothing: subpixel-antialiased;
 }
@@ -154,7 +148,7 @@ h1{
 
 h2{
   font-family:$brand-primary-font;
-  color: rgba(35, 41, 39, 0.3);
+  color: $brand-grey;
   font-size:2rem;
   line-height: 2.6rem;
   font-weight:900;
@@ -364,7 +358,7 @@ nav {
 }
 
 .w0 {
-  background-image: url('../img/ruffnews-cover.png');
+  background-image: url('../img/voiceopssite-cover.jpg');
   background-position: center;
 }
 
