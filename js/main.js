@@ -48,6 +48,14 @@ function menuToggle(){
 	});
 }
 
+function linkToggle(){
+	$('.sidebar-link').click(function(){
+		if( menuisVisible == true){
+			closeMenu();
+		} 
+	});
+}
+
 //NAVSCROLL
 
 function navScroll(){

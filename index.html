@@ -15,9 +15,18 @@
   <!--Sticky Nav-->
   <nav class="wrapper">
       <div class="container">
-        <a href="../">
-        <div class="nav_logo"><img src="img/logo.svg"></div>
-        </a>
+        <div class="row-flex">
+          <div class="col-flex-2">
+            <a href="../">
+            <div class="nav-logo"><img src="img/logo.svg"></div>
+            </a>
+          </div>
+          <div class="col-flex-2 nav-link-container">
+            <a id="worklink" class="nav-link" href="">Recent Work</a>
+            <a id="aboutlink" class="nav-link" href="">About Me</a>
+            <a id="contactlink" class="nav-link" href="">Hire Me</a>
+          </div>
+        </div>
       </div>
   </nav>
     <!--Intro-->
@@ -122,7 +131,14 @@
     <section id="contact" class="wrapper contact">
     <div class="container">
       <h2 class="section_title">Hire Me!</h2>
-      <p>I love to work with great teams and build world-class digital products.<br/>If you'd like to get in touch, send me an email at <a class="link" href="mailto:oldskoolduck@gmail.com">oldskoolduck@gmail.com</a></p>
+      <div class="row-flex">
+        <div class="col-flex-2">
+            <p>I love to work with great teams and build world-class digital products. If you'd like to get in touch, send me an email at <a class="link" href="mailto:oldskoolduck@gmail.com">oldskoolduck@gmail.com</a></p>
+        </div>
+        <div class="col-flex-2">
+            <a class="button" href="../img/grahamgrimaldi-resume.pdf" download><i class="material-icons">cloud_download</i> Get My Resume</a>
+        </div>
+      </div>
     </div>
     </section>
 
@@ -138,13 +154,13 @@
   <div class="sidebar sidebar-hidden">
     <ul class="sidebar_nav">
       <li>
-        <a id="worklink" class="nav-link" href="#work">Recent Work</a>
+        <a id="worklink" class="sidebar-link" href="#work">Recent Work</a>
       </li>
       <li>
-        <a id="aboutlink" class="nav-link" href="#about">About Me</a>
+        <a id="aboutlink" class="sidebar-link" href="#about">About Me</a>
       </li>
       <li>
-        <a id="contactlink" class="nav-link" href="#contact">Hire Me</a>
+        <a id="contactlink" class="sidebar-link" href="#contact">Hire Me</a>
       </li>
     </ul>
     <ul class="sidebar_social">
@@ -158,7 +174,7 @@
         <a href="https://twitter.com/oldskoolduck" target="_blank">Twitter</a>
       </li>
     </ul>
-    <a class="button sidebar_button" href="../img/grahamgrimaldi-resume.pdf" download>Download Resume</a>
+    <a class="button" href="../img/grahamgrimaldi-resume.pdf" download><i class="material-icons">cloud_download</i> Get My Resume</a>
   </div>
 
   <!--Footer-->
@@ -167,7 +183,7 @@
       <div class="row-flex">
         <div class="col-flex-3">
           <p>
-            Made with <i class="heart-icon"></i> in <span id="year"></span>
+            Made with <i class="heart-icon"></i> by Graham
           </p>
         </div>
         <div class="col-flex-3">
@@ -175,7 +191,7 @@
           <p class="tickle">Do not tickle!</p>
         </div>
         <div class="col-flex-3">
-          <a id="scrolltop" class="button footer_button" href="#uno">
+          <a id="scrolltop" class="button button-secondary footer_button" href="#uno">
             Back to Top <i class="material-icons">keyboard_arrow_up</i>
           </a>
         </div>
