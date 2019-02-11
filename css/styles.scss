@@ -21,9 +21,10 @@ $brand-gradient: linear-gradient(to bottom right, #96e6a1, #d4fc79);
 $brand-light:#FFF;
 $brand-offlight:#F5F5F5;
 $brand-grey:#9aa4ad;
+$brand-grey-light:#c6cfd6;
 $brand-dark:#404040;
 $brand-sidebar-dark:rgba(#404040, 0.97);
-$brand-primary-font:'Lato', sans-serif;
+$brand-primary-font:'Nunito', sans-serif;
 
 //Other
 $base-border-radius:4px;
@@ -31,7 +32,7 @@ $base-box-shadow-color:rgba(106, 106, 106, 0.1);
 
 //Math
 $base-font-size:18px;
-$container-size:1140px;
+$container-size:1040px;
 $sidebar-width:280px;
 
 //Media Queries
@@ -84,10 +85,6 @@ $breakpoints:(
 
 //Utility
 
-.clearfix{
-  clear:both;
-}
-
 .padding-top{
   padding-top:2em;
 }
@@ -100,8 +97,8 @@ $breakpoints:(
   color: $brand-dark;
   display: inline-block;
   background-image: $brand-gradient;
-  padding: 0 5px;
-  border-radius: $base-border-radius;
+  padding: 0 12px;
+  border-radius: 12px;
 }
 
 .drop-style {
@@ -140,8 +137,8 @@ body{
 
 h1{
   font-family:$brand-primary-font;
-  font-size:4rem;
-  line-height: 5rem;
+  font-size:3rem;
+  line-height: 4rem;
   font-weight:900;
   margin-bottom:1rem;
 }
@@ -149,9 +146,11 @@ h1{
 h2{
   font-family:$brand-primary-font;
   color: $brand-grey;
-  font-size:2rem;
+  font-size:1.5rem;
   line-height: 2.6rem;
+  letter-spacing: 0.012rem;
   font-weight:900;
+  text-transform: uppercase;
 }
 
 h3{
@@ -165,7 +164,7 @@ p{
   color: $brand-dark;
   font-family:$brand-primary-font;
   font-size:1.25rem;
-  line-height:2.125rem;
+  line-height:1.825rem;
 }
 
 li {
@@ -176,6 +175,7 @@ a{
   border: none;
   text-decoration:none;
   outline: 0;
+  color: inherit;
   @include transition;
   &:hover,
   &:focus{
@@ -198,7 +198,7 @@ img{
   font-size: 1.25rem;
   font-family:$brand-primary-font;
   font-weight: 900;
-  padding: 14px 20px;
+  padding: 16px 20px 12px 20px;
   position: relative;
   text-align: center;
   border-bottom: 4px solid rgba(191, 191, 191, 0.38);
@@ -216,7 +216,19 @@ img{
 
 .button-secondary {
   background-image: none;
-  background-color: $brand-offlight;
+  background-color: $brand-grey-light;
+  border-bottom: 4px solid $brand-grey-light;
+}
+
+.link {
+  color: $brand-dark;
+  text-decoration: underline;
+  text-decoration-color: $brand-primary;
+  font-weight: 900;
+  &:hover{
+    color: $brand-grey;
+    @include transition;
+  }
 }
 
 //Layout
@@ -234,16 +246,27 @@ img{
   @include transition;
 }
 
-.two-col{
-  float:left;
-  margin:0 4% 0 0;
-  width:48%;
+.row-flex{
+  display: flex;
+  justify-content: space-between;
   @include respond-to('mobile') {
-    margin:0 0 1rem;
-    width:100%;
+    display: block;
+    margin-bottom: 46px;
   }
-  &:last-child{
-    margin-right:0;
+}
+
+.col-flex-2{
+  flex-basis:48%;
+  @include respond-to('mobile') {
+    flex-basis: 100%;
+    margin: 15px 0;
+  }
+}
+
+.col-flex-3{
+  flex-basis:30%;
+  @include respond-to('mobile') {
+    flex-basis: 100%;
   }
 }
 
@@ -287,6 +310,7 @@ nav {
     color: $brand-light;
     display: inline-block;
     margin-top: 16px;
+    width: 40px
   }
   &_name {
     display: inline-block;
@@ -300,7 +324,7 @@ nav {
 .intro {
   background-color: #353635;
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2396e6a1' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  min-height:620px;
+  min-height:540px;
   padding:4rem 0;
   text-shadow: 0 4px 6px rgba(51, 51, 51, 0.2);
   @include respond-to('mobile'){
@@ -326,7 +350,7 @@ nav {
 //Recent Work
 
 .work {
-  background-color: $brand-light;
+  background-color: $brand-offlight;
 }
 
 .work-container{
@@ -348,12 +372,6 @@ nav {
   &_description {
     padding-bottom: 20px;
     color: $brand-grey;
-  }
-  &_button {
-    margin-bottom: 30px;
-    i {
-      top: 2px;
-    }
   }
 }
 
@@ -378,7 +396,7 @@ nav {
 //Toolbox
 
 .toolbox {
-  background: $brand-light;
+  background: $brand-offlight;
   &-icon {
     display: block;
     width: 100%;
@@ -386,7 +404,7 @@ nav {
     margin: 0 auto;
   }
   &-square {
-    background-color: $brand-offlight;
+    background-color: $brand-light;
     padding:30px 0;
     border-radius: $base-border-radius;
   }
@@ -411,7 +429,7 @@ nav {
 //About
 
 .about{
-  background: $brand-offlight;
+  background: $brand-light;
   &_img {
     @include drop-style;
   }
@@ -431,6 +449,7 @@ nav {
 .project {
   &_header {
     margin-top: 120px;
+    padding-bottom: 60px;
   }
   &_title {
     color: $brand-dark;
@@ -452,10 +471,8 @@ nav {
 .next {
   display: inline-block;
   width: 48%;
-  padding: 10px 20px;
   @include respond-to('mobile') {
     width: 100%;
-    padding: 10px 20px;
     margin-bottom: 10px;
   }
 }
@@ -483,7 +500,8 @@ nav {
 //Sidebar
 
 .sidebar{
-  background:$brand-sidebar-dark;
+  background:rgba(255,255,255,0.98);
+  color: $brand-dark;
   bottom:0;
   box-shadow:1px 0 4px 0 $base-box-shadow-color;
   height:100%;
@@ -494,35 +512,25 @@ nav {
   width:$sidebar-width;
   z-index:20;
   @include transition;
-  @include drop-style;
   @include respond-to('mobile') {
     width: 100%;
   }
   ul {
     margin-top: 30px;
-    padding-left: 25px;
+    padding: 0 25px;
   }
   li {
     padding-bottom: 12px;
-  }
-  a {
-    color: $brand-light;
-    font-size: 1.5rem;
-    font-weight: 400;
-    display: block;
-    padding: 4px 0;
-    @include transition;
-    &:hover {
-      color: $brand-primary;
-      @include transition;
-    }
   }
   &_nav a {
     font-size: 2rem;
     font-weight: 900;
   }
   &_social a {
-    color: $brand-grey;
+    color: $brand-dark;
+    font-weight: 900;
+    text-decoration: underline;
+    text-decoration-color: $brand-primary
   }
   &_contact a {
     color: $brand-grey;
@@ -534,6 +542,9 @@ nav {
     top:4px;
     @include transition;
     }
+  }
+  &_button {
+    margin: 10px 25px;
   }
 }
 
@@ -605,6 +616,7 @@ nav {
     #bar1{
       top:20px;
       transform: rotate(-45deg);
+      background:$brand-grey;
     }
     #bar2{
       opacity:0;
@@ -612,6 +624,7 @@ nav {
     #bar3{
       top:20px;
       transform: rotate(45deg);
+      background:$brand-grey;
     }
   }
 }
@@ -631,11 +644,11 @@ nav {
     margin: 0 auto;
     height:46px;
     width:46px;
-    @include respond-to('mobile') {
-      float: left;
-    }
     &:hover{
       animation: boo 1s infinite;
+    }
+    @include respond-to('mobile') {
+      display: none;
     }
   }
   .tickle {
