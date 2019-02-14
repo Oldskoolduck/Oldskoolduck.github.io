@@ -409,20 +409,24 @@ nav {
 }
 
 .w0 {
+  background-image: url("../img/voiceopsapp-cover.jpg");
+}
+
+.w1 {
   background-image: url("../img/voiceopssite-cover.jpg");
   background-position: center;
 }
 
-.w1 {
+.w2 {
   background-image: url("../img/maps-homeimg.jpg");
   background-position: center;
 }
 
-.w2 {
+.w3 {
   background-image: url("../img/pos-cover.jpg");
 }
 
-.w3 {
+.w4 {
   background-image: url("../img/tnportal-cover2.jpg");
 }
 
