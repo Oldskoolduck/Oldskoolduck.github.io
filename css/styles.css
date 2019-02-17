@@ -334,6 +334,10 @@ nav {
   -webkit-transition: all 0.3s ease;
 }
 
+.nav-link-container {
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   .nav-link-container {
     display: none;
