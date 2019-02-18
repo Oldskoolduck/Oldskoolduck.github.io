@@ -203,5 +203,23 @@
       </div>
     </footer>
 </body>
-<script src="../js/main.min.js" type="text/javascript"></script>
+<script>
+  (function() {
+  
+    var hamburger = {
+      burger: document.querySelector('.burger'),
+      sidebar: document.querySelector('.sidebar'),
+      navlinks: document.querySelector('.sidebar_nav'),
+  
+      doToggle: function(e) {
+        this.burger.classList.toggle('cooked');
+        this.sidebar.classList.toggle('sidebar-expanded');
+      }
+    };
+  
+    hamburger.burger.addEventListener('click', function(e) { hamburger.doToggle(e); });
+    hamburger.navlinks.addEventListener('click', function(e) { hamburger.doToggle(e); });
+  
+  }());
+</script>
 </html>

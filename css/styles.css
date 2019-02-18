@@ -354,7 +354,8 @@ nav {
 
 @media (max-width: 768px) {
   .intro {
-    min-height: 400px;
+    min-height: 100px;
+    padding: 2rem 0;
   }
 }
 
@@ -365,8 +366,8 @@ nav {
 
 @media (max-width: 768px) {
   .intro h1 {
-    font-size: 2.3rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2.75rem;
     margin-top: 90px;
   }
 }
@@ -552,21 +553,15 @@ nav {
   -webkit-box-shadow: 1px 0 4px 0 rgba(106, 106, 106, 0.1);
           box-shadow: 1px 0 4px 0 rgba(106, 106, 106, 0.1);
   height: 100%;
-  right: 0;
+  right: -40rem;
   padding-top: 50px;
   position: fixed;
   top: 0;
-  width: 280px;
+  width: 100%;
   padding: 0 30px;
   z-index: 20;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-  }
 }
 
 .sidebar ul {
@@ -608,17 +603,8 @@ nav {
   margin: 10px 25px;
 }
 
-.sidebar-hidden {
-  right: -300px;
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .sidebar-hidden {
-    width: 50%;
-    right: -50%;
-  }
+.sidebar-expanded {
+  right: 0;
 }
 
 .logo-container {
@@ -641,6 +627,8 @@ nav {
   width: 40px;
   z-index: 30;
   display: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
