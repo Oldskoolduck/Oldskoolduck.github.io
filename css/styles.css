@@ -39,13 +39,6 @@ table {
   -moz-box-sizing: border-box;
 }
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
 .padding-top {
   padding-top: 2em;
 }
@@ -612,19 +605,6 @@ nav {
 
 .sidebar-expanded {
   right: 0;
-}
-
-.logo-container {
-  height: 46px;
-  margin: 2rem 1.5rem;
-  position: relative;
-}
-
-.logo-container .logo {
-  background: url("../img/logo.svg") no-repeat;
-  float: left;
-  height: 46px;
-  width: 46px;
 }
 
 .burger {

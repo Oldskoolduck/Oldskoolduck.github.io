@@ -7,13 +7,6 @@
   -moz-box-sizing: border-box;
 }
 
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-}
-
 //Brand
 $brand-primary:#96e6a1;
 $brand-secondary:darken($brand-primary, 10%);
@@ -577,18 +570,6 @@ nav {
 
 .sidebar-expanded{
   right: 0;
-}
-
-.logo-container{
-  height:46px;
-  margin:2rem 1.5rem;
-  position:relative;
-  .logo{
-    background:url('../img/logo.svg') no-repeat;
-    float:left;
-    height:46px;
-    width:46px;
-  }
 }
 
 .burger{
