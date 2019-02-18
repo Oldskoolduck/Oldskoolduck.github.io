@@ -553,15 +553,22 @@ nav {
   -webkit-box-shadow: 1px 0 4px 0 rgba(106, 106, 106, 0.1);
           box-shadow: 1px 0 4px 0 rgba(106, 106, 106, 0.1);
   height: 100%;
-  right: -40rem;
+  right: -80rem;
   padding-top: 50px;
   position: fixed;
   top: 0;
   width: 100%;
   padding: 0 30px;
   z-index: 20;
+  display: none;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: block;
+  }
 }
 
 .sidebar ul {
