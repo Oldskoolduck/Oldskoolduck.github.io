@@ -276,6 +276,12 @@ img {
   padding: 4rem 0;
 }
 
+@media (max-width: 768px) {
+  .work {
+    padding: 2rem 0;
+  }
+}
+
 .section_title {
   margin-bottom: 25px;
 }
@@ -482,6 +488,12 @@ nav {
   padding-bottom: 60px;
 }
 
+@media (max-width: 768px) {
+  .project_header {
+    padding-bottom: 0px;
+  }
+}
+
 .project_title {
   color: #404040;
   padding-bottom: 20px;
@@ -540,7 +552,7 @@ nav {
 }
 
 .sidebar {
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, 0.99999);
   color: #404040;
   bottom: 0;
   -webkit-box-shadow: 1px 0 4px 0 rgba(106, 106, 106, 0.1);
