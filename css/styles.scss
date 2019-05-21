@@ -355,8 +355,8 @@ nav {
     color: $brand-light;
     margin-top: 140px;
     @include respond-to('mobile') {
-      font-size: 2rem;
-      line-height: 2.75rem;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
       margin-top: 90px;
     }
   }
@@ -402,7 +402,7 @@ nav {
 
 .w1 {
   background-image: url('../img/voiceopssite-cover.jpg');
-  background-position: center;
+  background-position: top;
 }
 
 .w2 {
