@@ -412,6 +412,10 @@ nav {
   color: #9aa4ad;
 }
 
+.w-1 {
+  background-image: url("../img/activity-context.png");
+}
+
 .w0 {
   background-image: url("../img/voiceopsapp-cover.jpg");
 }
